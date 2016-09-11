@@ -62,72 +62,72 @@ TEST(CollatzFixture, eval_6) {
     ASSERT_EQ(7, v);}
 
 TEST(CollatzFixture, eval_7) {
-    const int v = collatz_eval(4383, 67670);
-    ASSERT_EQ(340, v);}
+    const int v = collatz_eval(4383, 7672);
+    ASSERT_EQ(262, v);}
    
 TEST(CollatzFixture, eval_8) {
-    const int v = collatz_eval(42, 31270);
-    ASSERT_EQ(308, v);}
+    const int v = collatz_eval(42, 270);
+    ASSERT_EQ(128, v);}
    
 TEST(CollatzFixture, eval_9) {
-    const int v = collatz_eval(437308, 453531);
-    ASSERT_EQ(400, v);}
+    const int v = collatz_eval(7308, 6531);
+    ASSERT_EQ(257, v);}
 
 TEST(CollatzFixture, eval_10) {
-    const int v = collatz_eval(49464, 67329);
-    ASSERT_EQ(340, v);}
+    const int v = collatz_eval(9464, 7329);
+    ASSERT_EQ(260, v);}
 
 TEST(CollatzFixture, eval_11) {
-    const int v = collatz_eval(29540, 34522);
-    ASSERT_EQ(311, v);}
+    const int v = collatz_eval(540, 522);
+    ASSERT_EQ(124, v);}
    
 TEST(CollatzFixture, eval_12) {
-    const int v = collatz_eval(42, 31270);
-    ASSERT_EQ(308, v);}
+    const int v = collatz_eval(42, 70);
+    ASSERT_EQ(113, v);}
 
 TEST(CollatzFixture, eval_13) {
-    const int v = collatz_eval(78954, 63625);
-    ASSERT_EQ(351, v);}
+    const int v = collatz_eval(4954, 3625);
+    ASSERT_EQ(238, v);}
 
 TEST(CollatzFixture, eval_14) {
-    const int v = collatz_eval(876, 2764);
-    ASSERT_EQ(209, v);}
+    const int v = collatz_eval(876, 1764);
+    ASSERT_EQ(182, v);}
 
 TEST(CollatzFixture, eval_15) {
-    const int v = collatz_eval(64813, 78102);
-    ASSERT_EQ(351, v);}
+    const int v = collatz_eval(4813, 6102);
+    ASSERT_EQ(236, v);}
 
 TEST(CollatzFixture, eval_16) {
-    const int v = collatz_eval(378256, 378256);
-    ASSERT_EQ(180, v);}
+    const int v = collatz_eval(8256, 9256);
+    ASSERT_EQ(247, v);}
 
 TEST(CollatzFixture, eval_17) {
-    const int v = collatz_eval(62895, 83476);
-    ASSERT_EQ(351, v);}
+    const int v = collatz_eval(895, 476);
+    ASSERT_EQ(179, v);}
 
 TEST(CollatzFixture, eval_18) {
-    const int v = collatz_eval(32413, 45341);
-    ASSERT_EQ(324, v);}
+    const int v = collatz_eval(413, 341);
+    ASSERT_EQ(134, v);}
 
 TEST(CollatzFixture, eval_19) {
     const int v = collatz_eval(385, 125);
     ASSERT_EQ(144, v);}
 
 TEST(CollatzFixture, eval_20) {
-    const int v = collatz_eval(10485, 8912);
+    const int v = collatz_eval(9485, 8912);
     ASSERT_EQ(260, v);}
 
 TEST(CollatzFixture, eval_21) {
-    const int v = collatz_eval(94174, 47116);
-    ASSERT_EQ(351, v);}
+    const int v = collatz_eval(6174, 7116);
+    ASSERT_EQ(257, v);}
 
 TEST(CollatzFixture, eval_22) {
     const int v = collatz_eval(4109, 5013);
     ASSERT_EQ(215, v);}
 
 TEST(CollatzFixture, eval_23) {
-    const int v = collatz_eval(94145, 84124);
-    ASSERT_EQ(333, v);}
+    const int v = collatz_eval(4145, 5124);
+    ASSERT_EQ(215, v);}
 
 TEST(CollatzFixture, eval_24) {
     const int v = collatz_eval(5719, 1234);
@@ -150,12 +150,12 @@ TEST(CollatzFixture, eval_28) {
     ASSERT_EQ(182, v);}
 
 TEST(CollatzFixture, eval_29) {
-    const int v = collatz_eval(3123, 7456);
-    ASSERT_EQ(262, v);}
+    const int v = collatz_eval(3123, 4456);
+    ASSERT_EQ(238, v);}
 
 TEST(CollatzFixture, eval_30) {
-    const int v = collatz_eval(12313, 23890);
-    ASSERT_EQ(282, v);}
+    const int v = collatz_eval(2313, 2890);
+    ASSERT_EQ(209, v);}
 
 // -----
 // print
@@ -171,7 +171,7 @@ TEST(CollatzFixture, print) {
 // -----
 
 TEST(CollatzFixture, solve) {
-    istringstream r("1 10\n100 200\n201 210\n900 1000\n1000 900\n10 10\n4383 67670\n42 31270\n437308 453531\n49464 67329\n29540 34522\n42 31270\n78954 63625\n876 2764\n64813 78102\n378256 378256\n62895 83476\n32413 45341\n385 125\n10485 8912\n94174 47116\n4109 5013\n94145 84124\n5719 1234\n300 255\n255 300\n25 100\n1324 960\n3123 7456\n12313 23890\n");
+    istringstream r("1 10\n100 200\n201 210\n900 1000\n1000 900\n10 10\n4383 7672\n42 270\n7308 6531\n9464 7329\n540 522\n42 70\n4954 3625\n876 1764\n4813 6102\n8256 9256\n895 476\n413 341\n385 125\n9485 8912\n6174 7116\n4109 5013\n4145 5124\n5719 1234\n300 255\n255 300\n25 100\n1324 960\n3123 4456\n2313 2890\n");
     ostringstream w;
     collatz_solve(r, w);
-    ASSERT_EQ("1 10 20\n100 200 125\n201 210 89\n900 1000 174\n1000 900 174\n10 10 7\n4383 67670 340\n42 31270 308\n437308 453531 400\n49464 67329 340\n29540 34522 311\n42 31270 308\n78954 63625 351\n876 2764 209\n64813 78102 351\n378256 378256 180\n62895 83476 351\n32413 45341 324\n385 125 144\n10485 8912 260\n94174 47116 351\n4109 5013 215\n94145 84124 333\n5719 1234 238\n300 255 123\n255 300 123\n25 100 119\n1324 960 182\n3123 7456 262\n12313 23890 282\n", w.str());}
+    ASSERT_EQ("1 10 20\n100 200 125\n201 210 89\n900 1000 174\n1000 900 174\n10 10 7\n4383 7672 262\n42 270 128\n7308 6531 257\n9464 7329 260\n540 522 124\n42 70 113\n4954 3625 238\n876 1764 182\n4813 6102 236\n8256 9256 247\n895 476 179\n413 341 134\n385 125 144\n9485 8912 260\n6174 7116 257\n4109 5013 215\n4145 5124 215\n5719 1234 238\n300 255 123\n255 300 123\n25 100 119\n1324 960 182\n3123 4456 238\n2313 2890 209\n", w.str());}
